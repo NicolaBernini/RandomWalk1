@@ -42,19 +42,20 @@ namespace SimpleRandomWalk
       std::vector<RandomVarNS::RandomVariable<SpacesNS::EuclideanSpace<1> > > getHistory();
 
       private:
-        /**
-          * @brief The State
-          */
-        SpacesNS::EuclideanSpace<1>::Point m_State;
+      /**
+        * @brief The State
+        */
+      SpacesNS::EuclideanSpace<1>::Point m_State;
 
-        /**
-          * @brief The Time
-          */
-        TimeNS::Time::Point m_Time;
+      /**
+        * @brief The Time
+        */
+      TimeNS::Time::Point m_Time;
   };
 
   //** Alias for the Monodimensional Random Walk
   using MonoRandomWalk = RandomWalk <SpacesNS::EuclideanSpace<1> >;
 }
+
 
 #endif
