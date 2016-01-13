@@ -7,23 +7,22 @@ namespace TimeNS
     /**
       * @brief Generic Time
       */
-    class Time
+    class Time : public SpacesNS::Real
     {
-        public: 
-        class Point
-        {
 
-        };
+        //public:
+        //class Point
+        //{};
 
-        static Point getOrigin() { return m_Origin; };
+        //static Point getOrigin() { return m_Origin; };
 
-        protected:
+        //protected:
         /**
           * @brief The Origin of the Time Reference System
           *
           * Accessible by all the derive classes
           */
-        static Point m_Origin;
+        //static Point m_Origin;
     };
 
 
@@ -48,7 +47,11 @@ namespace TimeNS
         /**
           * @brief Constructor where the minimum Step Size is defined
           */
-        DiscreteTime(double in_minstepsize) {};
+        DiscreteTime(const SpacesNS::Real& in_minstepsize) {};
+
+        private:
+        SpacesNS::Real m_MinStepSize;
+
     };
 }
 
